@@ -40,7 +40,7 @@ async def send_redeem(ctx):
 # ปุ่ม Claim Role
 class ClaimRoleView(ui.View):
     def __init__(self):
-        super().__init__()
+        super().__init__(timeout=None)  # ✅ ทำให้ปุ่มอยู่ถาวร
         self.add_item(ClaimRoleButton())
 
 class ClaimRoleButton(ui.Button):

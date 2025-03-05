@@ -61,7 +61,7 @@ class RedeemForm(ui.Modal, title="Claim Your License"):
         role = interaction.guild.get_role(CUSTOMER_ROLE_ID)
 
         # ตรวจสอบว่าคีย์มี 10 ตัวอักษรขึ้นไปหรือไม่
-        if len(key) >= 10:
+        if len(key) >= 3:
             if role:
                 await user.add_roles(role)
                 await interaction.response.send_message(f"✅ **Success!** {user.mention}, คุณได้รับยศแล้ว **buyer Role โหลดโปรได้เลย ที่ https://discord.com/channels/923167904629928005/1346807138416328714**.", ephemeral=True)
